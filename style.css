@@ -25,6 +25,10 @@ h1 {
   display: none;
 }
 
+#guess-button {
+  animation: slideIn 0.3s;
+}
+
 #loading {
   height: 100%;
   weight: 100%;
@@ -47,9 +51,19 @@ h1 {
 
 .footer {
   margin-top: auto;
-  padding-top: 20px;
+  padding: 10px 18px;
+  border-radius: 50px;
   text-align: center;
-  align-self: flex-end;
+  color: white;
+  font-weight: 600;
+  background-color: rgba(0, 0, 0, .35);
+
+  position: relative;
+  bottom: -5px;
+  transition: all 0.3s ease-in;
+}
+.footer a {
+  color: white!important;
 }
 
 .title {
@@ -58,6 +72,8 @@ h1 {
   width: 300px;
   text-align: center;
   padding: 50px 0px;
+  /* color: rgba(0, 0, 0, .65); */
+  transition: all 0.3s ease-in;
 }
 
 .results {
@@ -70,8 +86,8 @@ h1 {
 .result-color {
   display: inline-block;
   width: 44px;
-  height: 44px;
-  border-radius: 30px;
+  height: 20px;
+  border-radius: 5px;
   background: black;
   margin: 10px;
   margin-top: 15px;
@@ -109,10 +125,17 @@ h1 {
 #results-div {
   display: flex;
   flex-direction: column;
+
+  font-weight: 600;
+  background-color: rgba(65, 64, 64, 0.301);
+  border-radius: 16px;
+  margin: 10px;
+  transition: all 0.3s ease-in;
+  animation: slideIn 0.3s;
 }
 
 .input-wrapper {
-  background-color: #222;
+  background-color: rgba(0, 0, 0, .65);
   color: white;
   font-size: 2em;
   padding: 10px;
@@ -123,7 +146,7 @@ h1 {
 .guess-input {
   height: 45px;
   font-size: 1em;
-  background-color: #222;
+  background-color: rgba(0, 0, 0, 0);
   color: white;
   border: none;
   padding: 10px;
@@ -132,39 +155,52 @@ h1 {
 .button {
   width: 100%;
   margin-top: 25px;
-  height: 48px;
+  height: 80px;
   border: none;
-  border-radius: 8px;
+  border-radius: 16px;
+  font-family: 'Quicksand', sans-serif;
   font-size: 1.5em;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 2px;
-  background-color: #222;
-  color: white;
+  background-color: rgb(255, 255, 255);
+  color: rgb(61, 53, 53);
   cursor: pointer;
-  box-shadow: 0px 4px 14px rgba(0, 0, 0, .35);
-  transition: background-color 100ms ease-in-out;
-  transition: box-shadow 100ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+
 }
 
 .button:hover {
-  background-color: #555;
+  background-color: rgba(255, 255, 255, 0.405);
+  color: white;
 }
 
 .button:active {
-  box-shadow: none;
-  background-color: #222;
+  background-color: rgba(255, 255, 255, 0.24);
+  color: white;
 }
 
 #reset-button {
-  background-color: #822;
+  color: rgb(61, 61, 61);
+  background-color: white;
   margin-top: 0px;
   transition: background-color 100ms ease-in-out;
 }
 
 #reset-button:hover {
-  background-color: #855;
+  background-color: rgba(65, 64, 64, 0.589);
+  color: white;
 }
 
-#reset-button:active {
-  background-color: #822;
+
+@keyframes slideIn {
+  0% {
+    position: relative;
+    top: 10px;
+    opacity: 0;
+  }
+  100% {
+    position: relative;
+    top: 0px;
+    opacity: 1;
+  }
 }
