@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>😛 HexSniffer</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand:500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- import the webpage's javascript files -->
+    <script src="color_gen.js" defer></script>
+    <script src="colourdiff.js" defer></script>
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <div id="loading">
+      😎 Loading ...
+    </div>
+    <div id="guess-body" class="colored-bg">
+      <div class="title">
+        Guess the Hex 🧐
+      </div>
+      <div class="wrapper">
+        <div class="input-wrapper">
+          <div class="input-group">
+            <span class="input-group-addon">#</span>
+            <input class="guess-input" type="text" maxlength="6" size="7" />
+          </div>
+        </div>
+
+        <div id="guess-div">
+          <button id="guess-button" class="button" onclick="evaluateHex()">
+            GUESS
+          </button>
+        </div>
+        <div id="results-div">
+          <div class="results">
+            Your color:
+            <div class="result-color">
+              
+            </div>
+          </div>
+          <div class="results">
+            Answer:
+            <span class="result-answer">
+              100000
+            </span>
+          </div>
+          <div class="results">
+            <a href="https://en.wikipedia.org/wiki/Color_difference#CIEDE2000" target="_blank">Distance:</a>
+            <span class="result-score">
+              100000
+            </span>
+          </div>
+          <span>&nbsp;</span>
+          
+          <button id="reset-button" class="button" onclick="newRandomBg(true)">
+            ANOTHER
+          </button>
+        </div>
+          
+        <div class="footer">
+          Made with 🍿 by <a href="https://twitter.com/shuvam360" target="_blank">@shuvam360</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

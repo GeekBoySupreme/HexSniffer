@@ -1,0 +1,206 @@
+body {
+  font-family: 'Quicksand', helvetica, arial, sans-serif;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background: black;
+}
+
+body:not(.user-is-tabbing) .button:focus,
+body:not(.user-is-tabbing) .guess-input:focus {
+  outline: none;
+}
+
+a:hover {
+  text-decoration-style: wavy;
+  background-color: rgba(0, 0, 0, .25);
+}
+
+h1 {
+  font-style: italic;
+  color: #373fff;
+}
+
+#guess-body {
+  display: none;
+}
+
+#guess-button {
+  animation: slideIn 0.3s;
+}
+
+#loading {
+  height: 100%;
+  weight: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: height 500ms ease-in-out;
+}
+
+.colored-bg {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  margin-top: auto;
+  padding: 10px 18px;
+  border-radius: 50px;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  background-color: rgba(0, 0, 0, .35);
+
+  position: relative;
+  bottom: -5px;
+  transition: all 0.3s ease-in;
+}
+.footer a {
+  color: white!important;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 3em;
+  width: 300px;
+  text-align: center;
+  padding: 50px 0px;
+  /* color: rgba(0, 0, 0, .65); */
+  transition: all 0.3s ease-in;
+}
+
+.results {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-color {
+  display: inline-block;
+  width: 44px;
+  height: 20px;
+  border-radius: 5px;
+  background: black;
+  margin: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: 3px solid white;
+}
+
+.result-score {
+  margin: 5px;
+  margin-top: 0px;
+  font-weight: 900;
+  font-size: 1.5em;
+}
+
+.result-answer {
+  margin: 5px;
+  margin-top: 0px;
+  font-weight: 900;
+  font-size: 1.5em;
+}
+
+.results-explanation {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.wrapper {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+#results-div {
+  display: flex;
+  flex-direction: column;
+
+  font-weight: 600;
+  background-color: rgba(65, 64, 64, 0.301);
+  border-radius: 16px;
+  margin: 10px;
+  transition: all 0.3s ease-in;
+  animation: slideIn 0.3s;
+}
+
+.input-wrapper {
+  background-color: rgba(0, 0, 0, .65);
+  color: white;
+  font-size: 2em;
+  padding: 10px;
+  padding-left: 20px;
+  border-radius: 16px;
+}
+
+.guess-input {
+  height: 45px;
+  font-size: 1em;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border: none;
+  padding: 10px;
+}
+
+.button {
+  width: 100%;
+  margin-top: 25px;
+  height: 80px;
+  border: none;
+  border-radius: 16px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  letter-spacing: 2px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(61, 53, 53);
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out;
+
+}
+
+.button:hover {
+  background-color: rgba(255, 255, 255, 0.405);
+  color: white;
+}
+
+.button:active {
+  background-color: rgba(255, 255, 255, 0.24);
+  color: white;
+}
+
+#reset-button {
+  color: rgb(61, 61, 61);
+  background-color: white;
+  margin-top: 0px;
+  transition: background-color 100ms ease-in-out;
+}
+
+#reset-button:hover {
+  background-color: rgba(65, 64, 64, 0.589);
+  color: white;
+}
+
+
+@keyframes slideIn {
+  0% {
+    position: relative;
+    top: 10px;
+    opacity: 0;
+  }
+  100% {
+    position: relative;
+    top: 0px;
+    opacity: 1;
+  }
+}
